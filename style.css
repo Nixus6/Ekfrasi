@@ -233,8 +233,8 @@ body {
 button,
 .button {
     /* position: relative; */
-    display: flex;
-    align-items: center;
+    position: relative;
+    display: inline-block;
     padding: 0.875rem 2.1875rem;
     background-image: linear-gradient(to right, var(--text3), var(--text2));
     border: 0;
@@ -246,18 +246,37 @@ button,
     font-size: 0.875rem;
     transition: opacity 300ms ease-in-out;
     overflow: hidden;
-    font-size: 1.125rem/* 18px */;
-    line-height: 1.75rem/* 28px */;
+    font-size: 1.125rem
+        /* 18px */
+    ;
+    line-height: 1.75rem
+        /* 28px */
+    ;
     /* margin-top: 1rem; */
-    border-style: solid;
-    border-color: transparent;
-    border-width: 2px;
+
 }
 
-.button:hover{
+/* .button:hover{
     background-color: white;
-    /* border-color: linear-gradient(to right, var(--text3), var(--text2)); */
-} 
+     border-color: linear-gradient(to right, var(--text3), var(--text2)); 
+}  */
+button::before,
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+button:hover::before,
+.button:hover::before {
+    opacity: 1;
+}
 
 /* FEATURE */
 
@@ -502,7 +521,7 @@ button,
     }
 }
 
-.feature__icon img{
+.feature__icon img {
     height: 5rem;
     margin-bottom: 1.875rem;
 }
