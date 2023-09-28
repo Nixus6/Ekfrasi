@@ -202,7 +202,7 @@ body {
 .hero__button {
     display: flex;
     align-items: center;
-    align-self: flex-start;
+    /* align-self: flex-start; */
 }
 
 .hero {
@@ -253,10 +253,10 @@ button,
     border-color: transparent;
     border-width: 2px;
 }
-button,
+
 .button:hover{
-    background-image: var(--bg-body);
-    border-color: linear-gradient(to right, var(--text3), var(--text2));
+    background-color: white;
+    /* border-color: linear-gradient(to right, var(--text3), var(--text2)); */
 } 
 
 /* FEATURE */
@@ -502,15 +502,16 @@ button,
     }
 }
 
-.feature__icon {
+.feature__icon img{
+    height: 5rem;
     margin-bottom: 1.875rem;
 }
 
-@media (min-width: 64em) {
+/* @media (min-width: 64em) {
     .feature__icon {
         margin-bottom: 2.75rem;
     }
-}
+} */
 
 .feature__title {
     font-size: 1.25rem;
