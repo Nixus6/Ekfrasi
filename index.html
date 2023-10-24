@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/LogoEkfrasiNegro.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>Ekfrasi</title>
 
@@ -19,6 +20,7 @@
                 </a>
                 <ul class="header__menu">
                     <li><a href="">Inicio</a></li>
+                    <li><a id="mostrarBoton" style="cursor: pointer;">Sobre Nosotros</a></li>
                     <li><a href="">Servicios</a>
                         <ul>
                             <li><a href="">Logotipos y branding</a></li>
@@ -32,176 +34,206 @@
                             <li><a href="">Tipografía</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Sobre Nosotros</a></li>
                     <li><a href="">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container wrapper ">
-            <div class="hero__layout">
-                <div class="hero__content">
+    <div style="display: none;" id="sobreNosotros">
+        <section class="hero fondo_nosotros relative">
+            <div class="container wrapper">
+                <div class="fondo__negro"> </div>
+                <div class="hero__content__sn">
                     <h1 class="hero__headline">
                         <span class="hero__headline__text">
-                            Hola Bienvenido a Ekfrasi.
+                            Sobre Nosotros
                         </span>
                     </h1>
-                    <p class="hero__description">
-                        La creatividad creando vida
+                    <p class="hero__description" style="text-align: center;">
+                        Ekfrasi es una agencia de diseño e integración de contenidos digitales que brinda sus servicios a cualquier empresa, negocio o emprendimiento con el fin de mejorar su posicionamiento  en el mercado y su imagen corporativa a través de medios digitales y estrategias de mercado.
                     </p>
-                    <div class="hero__button">
-                        <a href="mailto:ekfrasiagenciapublicidad@gmail.com" class="button hero__cta">Contactar</a>
-                    </div>
-                </div>
-                <div class="hero__image">
-                    <video width="640" height="360" controls>
-                        <source src="./assets/video/VIDEOEMPRESARIAL.mp4" type="video/mp4">
-                        <p>Tu navegador no admite la etiqueta de video.</p>
-                    </video>
                 </div>
             </div>
+        </section>
+    </div>
+    <div style="display: block;" id="landingPage">
+        <section class="hero">
+            <div class="container wrapper ">
+                <div class="hero__layout">
+                    <div class="hero__content">
+                        <h1 class="hero__headline">
+                            <span class="hero__headline__text">
+                                Hola Bienvenido a Ekfrasi.
+                            </span>
+                        </h1>
+                        <p class="hero__description">
+                            La creatividad creando vida
+                        </p>
+                        <div class="hero__button">
+                            <a href="mailto:ekfrasiagenciapublicidad@gmail.com" class="button hero__cta">Contactar</a>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <video width="640" height="360" controls>
+                            <source src="./assets/video/VIDEOEMPRESARIAL.mp4" type="video/mp4">
+                            <p>Tu navegador no admite la etiqueta de video.</p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="articles">
+            <div class="article__content wrapper container--pall">
+                <h2>Nuestros Productos</h2>
+
+                <div class="article__grid">
+                    <a href="#" class="article__item">
+                        <div class="article__image"
+                            style="background-image: url('./assets/images/products/Baso.webp'); background-position: 15% 85%;">
+                        </div>
+                        <div class="article__text">
+                            <div class="article__author">Por ekfrasi</div>
+                            <div class="article__title">
+                                Pocillos
+                            </div>
+                            <div class="article__description">
+                                …
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article__item">
+                        <div class="article__image"
+                            style="background-image: url('./assets/images/products/bolsa.webp');">
+
+                        </div>
+                        <div class="article__text">
+                            <div class="article__author">Por ekfrasi</div>
+                            <div class="article__title">
+                                Bolsas de Tela
+                            </div>
+                            <div class="article__description">
+                                ...
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article__item">
+                        <div class="article__image"
+                            style="background-image: url('./assets/images/products/Gorra.webp')">
+                        </div>
+                        <div class="article__text">
+                            <div class="article__author">Por ekfrasi</div>
+                            <div class="article__title">
+                                Gorras
+                            </div>
+                            <div class="article__description">
+                                ...
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article__item">
+                        <div class="article__image"
+                            style="background-image: url('./assets/images/products/marcador.webp'); background-size: contain;">
+                        </div>
+                        <div class="article__text">
+                            <div class="article__author">Por ekfrasi</div>
+                            <div class="article__title">
+                                Esferos
+                            </div>
+                            <div class="article__description">
+                                …
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="carrousel">
+            <div class=" wrapper container--pall">
+                <h2>Proyectos Ekfrasi</h2>
+                <div class="container__carousel">
+                    <div class="carousel__content">
+                        <div class="carousel__face"><span class="carousel__text">Casa Bonita</span></div>
+                        <div class="carousel__face"><span class="carousel__text">Guavio Experience</span></div>
+                        <div class="carousel__face"><span class="carousel__text">Personix</span></div>
+                        <div class="carousel__face"><span class="carousel__text">Choco Lover</span></div>
+                        <div class="carousel__face"><span class="carousel__text">Foros y Accesorios</span></div>
+                        <div class="carousel__face"><span class="carousel__text">Trufinings</span></div>
+                        <div class="carousel__face"><span class="carousel__text">Agrosegovia</span></div>
+                        <div class="carousel__face"><span class="carousel__text">Super Xtra</span></div>
+                        <div class="carousel__face"><span class="carousel__text">Ekfrasi</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <div class="feature__content container wrapper container--pall">
+                <div class="feature__intro">
+                    <h2>¿Qué opinan nuestros clientes?</h2>
+                </div>
+
+                <div class="feature__grid">
+                    <div class="feature__item">
+                        <div class="feature__icon">
+                            <img src="./assets/images/users/mujer.png" />
+                        </div>
+                        <div class="feature__title">Julia</div>
+                        <div class="feature__description">
+                            «El servicio al cliente es excelente me dieron un asesoramiento profesional y el trabajo es
+                            muy
+                            bueno.»
+                        </div>
+                    </div>
+
+                    <div class="feature__item">
+                        <div class="feature__icon">
+                            <img src="./assets/images/users/hombre.png" />
+                        </div>
+                        <div class="feature__title">Andres</div>
+                        <div class="feature__description">
+                            «El servicio al cliente de esta empresa es excepcional. Resolvieron rápidamente mi problema
+                            y
+                            fueron amables y
+                            atentos en todo momento. ¡Gracias por una gran experiencia!»
+                        </div>
+                    </div>
+
+                    <div class="feature__item">
+                        <div class="feature__icon">
+                            <img src="./assets/images/users/turista.png" />
+                        </div>
+                        <div class="feature__title">Fernanda</div>
+                        <div class="feature__description">
+                            «La empresa ofrece precios muy favorables para mi economia.»
+                        </div>
+                    </div>
+
+
+                    <div class="feature__item">
+                        <div class="feature__icon"><img src="./assets/images/users/hombrebueno.png" /></div>
+                        <div class="feature__title">Julio</div>
+                        <div class="feature__description">
+                            «¡Esta agencia tiene precios competitivos y productos de alta calidad! Realicé una
+                            comparación
+                            exhaustiva antes de
+                            adquirir sus servicios y encontre que esta agencia ofrecía el mejor valor por mi dinero.»
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <a href="https://www.google.com/maps" target="_blank">
+        <div class="boton-flotante">
+            <i class="fa fa-map-marker"></i> Ubicación
         </div>
-    </section>
-
-    <section class="articles">
-        <div class="article__content wrapper container--pall">
-            <h2>Nuestros Productos</h2>
-
-            <div class="article__grid">
-                <a href="#" class="article__item">
-                    <div class="article__image"
-                        style="background-image: url('./assets/images/products/Baso.webp'); background-position: 15% 85%;">
-                    </div>
-                    <div class="article__text">
-                        <div class="article__author">Por ekfrasi</div>
-                        <div class="article__title">
-                            Pocillos
-                        </div>
-                        <div class="article__description">
-                            …
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="article__item">
-                    <div class="article__image"></div>
-                    <div class="article__text">
-                        <div class="article__author">Por ekfrasi</div>
-                        <div class="article__title">
-                            Bolsas de Tela
-                        </div>
-                        <div class="article__description">
-                            ...
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="article__item">
-                    <div class="article__image" style="background-image: url('./assets/images/products/Gorra.webp')">
-                    </div>
-                    <div class="article__text">
-                        <div class="article__author">Por ekfrasi</div>
-                        <div class="article__title">
-                            Gorras
-                        </div>
-                        <div class="article__description">
-                            ...
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="article__item">
-                    <div class="article__image"
-                        style="background-image: url('./assets/images/products/marcador.webp'); background-size: contain;">
-                    </div>
-                    <div class="article__text">
-                        <div class="article__author">Por ekfrasi</div>
-                        <div class="article__title">
-                            Esferos
-                        </div>
-                        <div class="article__description">
-                            …
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="carrousel">
-        <div class=" wrapper container--pall">
-            <h2>Proyectos Ekfrasi</h2>
-            <div class="container__carousel">
-                <div class="carousel__content">
-                    <div class="carousel__face"><span class="carousel__text">Casa Bonita</span></div>
-                    <div class="carousel__face"><span class="carousel__text">Guavio Experience</span></div>
-                    <div class="carousel__face"><span class="carousel__text">Personix</span></div>
-                    <div class="carousel__face"><span class="carousel__text">Choco Lover</span></div>
-                    <div class="carousel__face"><span class="carousel__text">Foros y Accesorios</span></div>
-                    <div class="carousel__face"><span class="carousel__text">Trufinings</span></div>
-                    <div class="carousel__face"><span class="carousel__text">Agrosegovia</span></div>
-                    <div class="carousel__face"><span class="carousel__text">Super Xtra</span></div>
-                    <div class="carousel__face"><span class="carousel__text">Ekfrasi</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="feature">
-        <div class="feature__content container wrapper container--pall">
-            <div class="feature__intro">
-                <h2>¿Qué opinan nuestros clientes?</h2>
-            </div>
-
-            <div class="feature__grid">
-                <div class="feature__item">
-                    <div class="feature__icon">
-                        <img src="./assets/images/users/mujer.png" />
-                    </div>
-                    <div class="feature__title">Julia</div>
-                    <div class="feature__description">
-                        «El servicio al cliente es excelente me dieron un asesoramiento profesional y el trabajo es muy
-                        bueno.»
-                    </div>
-                </div>
-
-                <div class="feature__item">
-                    <div class="feature__icon">
-                        <img src="./assets/images/users/hombre.png" />
-                    </div>
-                    <div class="feature__title">Andres</div>
-                    <div class="feature__description">
-                        «El servicio al cliente de esta empresa es excepcional. Resolvieron rápidamente mi problema y
-                        fueron amables y
-                        atentos en todo momento. ¡Gracias por una gran experiencia!»
-                    </div>
-                </div>
-
-                <div class="feature__item">
-                    <div class="feature__icon">
-                        <img src="./assets/images/users/turista.png" />
-                    </div>
-                    <div class="feature__title">Fernanda</div>
-                    <div class="feature__description">
-                        «La empresa ofrece precios muy favorables para mi economia.»
-                    </div>
-                </div>
-
-
-                <div class="feature__item">
-                    <div class="feature__icon"><img src="./assets/images/users/hombrebueno.png" /></div>
-                    <div class="feature__title">Julio</div>
-                    <div class="feature__description">
-                        «¡Esta agencia tiene precios competitivos y productos de alta calidad! Realicé una comparación
-                        exhaustiva antes de
-                        adquirir sus servicios y encontre que esta agencia ofrecía el mejor valor por mi dinero.»
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </a>
 
     <footer class="footer">
         <div class="container">
@@ -264,8 +296,15 @@
         </div>
 
     </footer>
-    <script>
+    <script type="text/javascript">
+        const mostrarSobreNosotros = document.getElementById("mostrarBoton");
+        const sobreNosotros = document.getElementById("sobreNosotros");
+        const landing = document.getElementById("landingPage");
 
+        mostrarSobreNosotros.addEventListener("click", function () {
+            sobreNosotros.style.display = "block";
+            landing.style.display = "none";
+        });
     </script>
 </body>
 
